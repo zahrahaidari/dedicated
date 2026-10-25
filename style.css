@@ -1,0 +1,118 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* FIRST PAGE */
+#page1{
+    width:100%;
+    height:100vh;
+    background:linear-gradient(135deg,#fdfbfb,#ebedee);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    position:relative;
+}
+
+h1{
+    font-size:50px;
+    color:#222;
+    text-align:center;
+    z-index:2;
+}
+
+button{
+    margin-top:30px;
+    padding:16px 45px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(45deg,#ff4fd8,#9b4dff);
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    transition:0.3s;
+    z-index:2;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+/* RAINING CIRCLES */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    animation:fall linear infinite;
+    opacity:0.8;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-100px);
+    }
+    100%{
+        transform:translateY(110vh);
+    }
+}
+
+/* SECOND PAGE */
+#page2{
+    width:100%;
+    height:100vh;
+    background:linear-gradient(135deg,#8e6cff,#ff8ad8);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.card{
+    width:85%;
+    max-width:700px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(8px);
+    padding:40px;
+    border-radius:25px;
+    color:white;
+    z-index:2;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* HEARTS */
+.heart{
+    position:absolute;
+    color:red;
+    font-size:30px;
+    animation:floatHeart linear infinite;
+    opacity:0.8;
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(100vh) rotate(0deg);
+    }
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+    }
+}
